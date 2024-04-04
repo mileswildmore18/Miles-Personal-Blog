@@ -3,6 +3,10 @@
     padding: 0;
 }
 
+body {
+    display:flex;
+}
+
 a {
     display: flex;
     justify-content: flex-end;

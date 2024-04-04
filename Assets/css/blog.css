@@ -3,6 +3,10 @@
     padding: 0;
 }
 
+body {
+    display:flex;
+}
+
 a {
     display: flex;
     justify-content: flex-end;
@@ -12,6 +16,8 @@ a {
 }
 
 .dark-mode {
+    display: flex;
+    justify-content:flex-end;
     background-color: black;
     color: white;
 }

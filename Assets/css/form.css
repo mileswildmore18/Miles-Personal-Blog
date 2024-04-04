@@ -12,6 +12,8 @@ a {
 }
 
 .dark-mode {
+    display: flex;
+    justify-content:flex-end;
     background-color: black;
     color: white;
 }
