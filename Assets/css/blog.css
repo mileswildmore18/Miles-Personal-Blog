@@ -15,6 +15,13 @@ a {
     background-color: black
 }
 
+.back {
+    display: flex;
+    background-color:black;
+    color: white;
+    font-size:medium;
+}
+
 .dark-mode {
     display: flex;
     justify-content:flex-end;
