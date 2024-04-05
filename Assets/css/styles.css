@@ -9,19 +9,14 @@ body {
 
 a {
     display: flex;
+    flex-direction: row;
     justify-content: flex-end;
     color: white;
     font-family: Arial, Helvetica, sans-serif;
     background-color: black
 }
 
-.back {
-    background-color: black;
-    color: white;
-    font-family:Arial, Helvetica, sans-serif;
-    font-size:medium;
-}
-
+/* The properties for when dark mode is activated */
 .dark-mode {
     background-color: black;
     color: white;
@@ -29,4 +24,22 @@ a {
 
 #warningMessage {
     color:red;
+}
+/* The picture of the sun for the left side of the index */
+.first-blog {
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-image: url(../sun-blog.png);
+    width: 50%;
+    
+
+}
+.first-blog h1 {
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    color:white;
+    font-family: Arial, Helvetica, sans-serif;
 }
