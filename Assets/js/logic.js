@@ -15,7 +15,7 @@ function countdown() {
     const message = setInterval(function () {
         
         //updating the page
-        warningMessage.textContent = `${messageTime} please fill out the form`;
+        warningMessage.textContent = `Please fill out the form before submitting`;
         //updating the time of the message
         
         if (messageTime === 0) {

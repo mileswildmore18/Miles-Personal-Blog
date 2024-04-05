@@ -26,3 +26,7 @@ a {
     background-color: black;
     color: white;
 }
+
+#warningMessage {
+    color:red;
+}

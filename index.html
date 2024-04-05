@@ -8,18 +8,20 @@
 </head>
 <body>
     <button class="darkMode" onclick="darkMode()">&#127763;</button>
+    <article class = "first-blog">
+        
+    </article>
     
-    <div id = "warningMessage">
-        <form class ="form" onsubmit="return validateform()" action="/blog.html"></form>></form>
-        <label for="userName"> Username</label><br>
-        <input type="text" id="userName" name="userName"><br>
-        <label for="title"> Title</label><br>
-        <input type="text" id="title" name="title"><br>
-        <label for="content"> Content</label><br>
-        <input type="text" id="Content" name="Content"><br>
-        <input type="submit" value="Submit">
-    </form> 
-    </div>
+        <form class ="form" onsubmit="return validateform()" action="/blog.html">
+            <label for="userName">Username</label><br>
+            <input type="text" id="userName" name="userName"><br>
+            <label for="title"> Title</label><br>
+            <input type="text" id="title" name="title"><br>
+            <label for="content"> Content</label><br>
+            <input type="text" id="Content" name="Content"><br>
+            <input type="submit" value="Submit">
+            <div id = "warningMessage"></div>
+        </form>
     <script src ="./Assets/js/logic.js" ></script>  
 </body>
 </html>
