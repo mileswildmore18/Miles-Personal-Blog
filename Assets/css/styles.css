@@ -48,3 +48,12 @@ a {
     display: inline-block;
     width: 100%;
 }
+
+#warningMessage {
+    visibility:hidden;
+    
+}
+
+#warningMessage.error {
+    color:red;
+}

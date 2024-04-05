@@ -1,5 +1,9 @@
 //This will activate a alert message if submission form is not filled out
-const warningMessage = document.getElementsByClassName('form')
+const userInput = document.querySelector('#username');
+const userTitle = document.querySelector('#title');
+const userContent = document.querySelector('#content');
+const submitButton = document.querySelector('#submit');
+const warningMessage = document.getElementsByClassName('form');
 
 //Show how long the alert message stays on failed submission
 function validateForm() {
@@ -9,6 +13,11 @@ function validateForm() {
         return false;
     }
 } 
+
+submitButton.addEventListener('click', function (event){
+    let userName = localStorage.getItem('')
+})
+
 function countdown() {
     let messageTime = 5;
 
