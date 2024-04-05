@@ -7,16 +7,8 @@ const warningMessage = document.getElementsByClassName('form');
 
 
 //Show how long the alert message stays on failed submission
-function validateForm() {
-    let empty = document.getElementById(username).value;
-    if (empty == "") {
-        alert(`${warningMessage}`)
-        return false;
-    }
-}
 
 submitButton.addEventListener('click', function (event) {
-    event.preventDefault();
     //Getting values from the form
     const userName = document.querySelector('#username').value;
     const title = document.querySelector('#title').value;
