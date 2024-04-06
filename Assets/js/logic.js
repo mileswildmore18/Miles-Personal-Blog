@@ -21,16 +21,12 @@ submitButton.addEventListener('click', function (event) {
     } else if (content === '') {
         displayMessage('Please fill out the form before submitting');
     } else {
-        function redirect() {
-            window.location.replace("./blog.html");
-            return false;
-
-            
-        }
-    }       localStorage.setItem('username', userName);
+        alert('Content cannot be blank');
+    }
+            localStorage.setItem('username', userName);
             localStorage.setItem('title', title);
-            localStorage.setItem('content', content)
-})
+            localStorage.setItem('content', content);
+        })
 
 
 function countdown() {

@@ -1,42 +1,41 @@
 <!DOCTYPE html>
 <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="./Assets/css/styles.css">
+        <title>Miles'Personal Blog</title>
+    </head>
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./Assets/css/styles.css">
-    <title>Miles'Personal Blog</title>
-</head>
-
-<body>
-    <div class="dark">
-        <button class="darkMode" onclick="darkMode()">&#127763;</button>
-    </div>
-    <div class="row">
-        <div class="column">
-            <article class="first-blog">
-                <div class="container">
-                    <img src="Assets/sun.png" alt="Sun" style="width:100%;">
-                    <div class="h1">My First Blog</div>
-                </div>
-            </article>
+    <body>
+        <div class="dark">
+            <button class="darkMode" onclick="darkMode()">&#127763;</button>
         </div>
-        <div class="column">
-            <form class="form" onsubmit="return validateform()" action="/blog.html">
-                <h2>What's on your mind?</h2>
-                <div class="input-group">
-                    <label for="userName">Username</label><br>
-                    <input type="text" id="userName" name="userName"><br>
-                    <label for="title"> Title</label><br>
-                    <input type="text" id="title" name="title"><br>
-                    <label for="content"> Content</label><br>
-                    <input type="text" id="Content" name="Content" size="40"><br>
-                    <div id="warningMessage"></div>
-                    <button id="submit" onsubmit="return redirect()">Submit</button>
-            </form>
+        <div class="row">
+            <div class="column">
+                <article class="first-blog">
+                    <div class="container">
+                        <img src="Assets/sun.png" alt="Sun" style="width:100%;">
+                        <div class="h1">My First Blog</div>
+                    </div>
+                </article>
+            </div>
+            <div class="column">
+                <form class="form" onsubmit="return validateform()" action="/blog.html">
+                    <h2>What's on your mind?</h2>
+                    <div class="input-group">
+                        <label for="userName">Username</label><br>
+                        <input type="text" id="userName" name="userName"><br>
+                        <label for="title"> Title</label><br>
+                        <input type="text" id="title" name="title"><br>
+                        <label for="content"> Content</label><br>
+                        <input type="text" id="Content" name="Content" size="40"><br>
+                        <div id="warningMessage"></div>
+                        <button id="submit" onsubmit="return redirect()">Submit</button>
+                </form>
+            </div>
         </div>
-    </div>
-    <script src="./Assets/js/logic.js"></script>
-</body>
+        <script src="./Assets/js/logic.js"></script>
+    </body>
 
 </html>
