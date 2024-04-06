@@ -1,11 +1,18 @@
-body {
+
+ body { 
     display:flex;
     justify-content: center;
     box-sizing: border-box;
 }
+.dark { 
+    display:flex;
+    flex-direction: column;
+    
+    
+}
 
 /* The properties for when dark mode is activated */
-.darkMode {
+ .darkMode { 
     display: flex;
     justify-content: center;
     background-color: black;
@@ -15,24 +22,28 @@ body {
 .darkMode label {
     color:white;
 }
+
+/* This keeps the 2 columns side by side */
+.row {
+    display:flex;
+}
+
+.row:after {
+    content:"";
+    display:table;
+    clear: both;
+}
 /* The picture of the sun for the left side of the index and form on the right side*/
 .column {
+    float: left;
     width:50%;
+    flex: 50%;
     padding: 30px;
     height: 600px;
     border-style: double;
 }
-
-label
-
-.row {
-    display:flex;
-    flex-direction: column;
-    
-}
-
 /* Aligning the words inside the sun image */
-.container {
+ .container { 
     position: relative;
     text-align: center;
     color: white;

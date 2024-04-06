@@ -9,8 +9,9 @@
 </head>
 
 <body>
-
-    <button class="darkMode" onclick="darkMode()">&#127763;</button>
+    <div class="dark">
+        <button class="darkMode" onclick="darkMode()">&#127763;</button>
+    </div>
     <div class="row">
         <div class="column">
             <article class="first-blog">
@@ -23,16 +24,15 @@
         <div class="column">
             <form class="form" onsubmit="return validateform()" action="/blog.html">
                 <h2>What's on your mind?</h2>
-                <div class="input-group"></div>
-                <label for="userName">Username</label><br>
-                <input type="text" id="userName" name="userName"><br>
-                <label for="title"> Title</label><br>
-                <input type="text" id="title" name="title"><br>
-                <label for="content"> Content</label><br>
-                <input type="text" id="Content" name="Content" size="40"><br>
-
-                <div id="warningMessage"></div>
-                <button id="submit" onsubmit="return redirect()">Submit</button>
+                <div class="input-group">
+                    <label for="userName">Username</label><br>
+                    <input type="text" id="userName" name="userName"><br>
+                    <label for="title"> Title</label><br>
+                    <input type="text" id="title" name="title"><br>
+                    <label for="content"> Content</label><br>
+                    <input type="text" id="Content" name="Content" size="40"><br>
+                    <div id="warningMessage"></div>
+                    <button id="submit" onsubmit="return redirect()">Submit</button>
             </form>
         </div>
     </div>
