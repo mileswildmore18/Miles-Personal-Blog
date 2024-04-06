@@ -25,11 +25,11 @@ submitButton.addEventListener('click', function (event) {
             window.location.replace("./blog.html");
             return false;
 
-            localStorage.setItem('username', userName);
+            
+        }
+    }       localStorage.setItem('username', userName);
             localStorage.setItem('title', title);
             localStorage.setItem('content', content)
-        }
-    }
 })
 
 

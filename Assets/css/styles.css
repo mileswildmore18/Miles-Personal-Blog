@@ -36,8 +36,7 @@
 /* The picture of the sun for the left side of the index and form on the right side*/
 .column {
     float: left;
-    width:50%;
-    flex: 50%;
+    width:100%;
     padding: 30px;
     height: 600px;
     border-style: double;
