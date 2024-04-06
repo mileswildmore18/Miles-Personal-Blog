@@ -5,7 +5,6 @@
 .dark { 
     display:flex;
     justify-content: flex-end;
-    flex-direction: column;
     
     
 }
@@ -25,14 +24,10 @@
     display:flex;
 }
 
-.row:after {
-    content:"";
-    display:table;
-    clear: both;
-}
 /* The picture of the sun for the left side of the index and form on the right side*/
 .column {
     width:100%;
+    margin-right: 5px;
     padding: 30px;
     height: 600px;
     border-style: double;
@@ -68,9 +63,7 @@
 }
 
 .form {
-    align-content: right;
     display: inline-block;
-    justify-content: center;
     width: 100%;
 }
 
@@ -84,14 +77,13 @@ h2 {
     margin: 115px;
 }
 
-
 .input-group {
-    margin-top: 0px;
-    margin-bottom: 0px;
+    font-weight: bold;
 }
-input[type=text], #Content {
+
+input[type=text] {
     display: inline-block;
-    width: 100%;
+    width: 80%;
     padding: 40px, 40px;
 }
 
@@ -100,10 +92,21 @@ label {
     font-family: Arial, Helvetica, sans-serif;
 }
 
-#submit {
-    margin-top: 25px;
-    margin-left: 400px;
+#Content {
+    height: 100px;
+    width: 80%;
+}
 
+
+/* Properties of the submit button */
+input[type=submit] {
+    width:90%;
+    background-color: darkblue;
+    color: white;
+    cursor: pointer;
+    padding: 40px, 20px;
+    margin-top: 30px;
+    border: none;
 }
 /* The message is hidden unless an error is made */
 #warningMessage {
