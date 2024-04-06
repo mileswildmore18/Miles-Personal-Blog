@@ -17,14 +17,10 @@ body {
 .header button{
     display: flex;
 }
-a {
+.nav {
     display: flex;
     justify-content: flex-end;
-    color: white;
-    font-family: Arial, Helvetica, sans-serif;
-    background-color: black
 }
-
 .back {
     display: flex;
     background-color:black;
@@ -37,4 +33,11 @@ a {
     justify-content: center;
     background-color: black;
     color: white;
+}
+
+.article {
+    display: flex;
+    flex-direction:column;
+    border-style: double;
+    height: 600px;
 }

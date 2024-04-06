@@ -1,32 +1,32 @@
-//This will activate a alert message if submission form is not filled out
+
 const userInput = document.querySelector('#username');
 const userTitle = document.querySelector('#title');
 const userContent = document.querySelector('#content');
-const submitButton = document.querySelector('#submit');
+const submitButton = document.getElementById('#submit');
 const warningMessage = document.getElementsByClassName('form');
+
+
+//This will activate a alert message if submission form is not filled out
+submitButton.addEventListener('click', function storeInput() {
+    if (userInput != null) {
+         localStorage.setItem('Username', userInput.value);
+    } else {
+         alert('Please enter your username');
+    } if (userTitle != null) {
+         localStorage.setItem('Title', userTitle.value);
+    } else {
+         alert('Please enter a title for your post');
+    } if (userContent != null) {
+         localStorage.setItem('Content', userContent.value);
+    } else {
+         alert('Content cannot be blank');
+    }
+});
 
 
 //Show how long the alert message stays on failed submission
 
-submitButton.addEventListener('click', function (event) {
-    //Getting values from the form
-    const userName = document.querySelector('#username').value;
-    const title = document.querySelector('#title').value;
-    const content = document.querySelector('#content').value;
 
-    if (userName === '') {
-        displayMessage('Please fill out the form before submitting');
-    } else if (title === '') {
-        displayMessage('Please fill out the form before submitting');
-    } else if (content === '') {
-        displayMessage('Please fill out the form before submitting');
-    } else {
-        alert('Content cannot be blank');
-    }
-            localStorage.setItem('username', userName);
-            localStorage.setItem('title', title);
-            localStorage.setItem('content', content);
-        })
 
 
 function countdown() {

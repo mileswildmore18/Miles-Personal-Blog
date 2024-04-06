@@ -1,11 +1,10 @@
 
  body { 
-    display:flex;
-    justify-content: center;
     box-sizing: border-box;
 }
 .dark { 
     display:flex;
+    justify-content: flex-end;
     flex-direction: column;
     
     
@@ -13,8 +12,6 @@
 
 /* The properties for when dark mode is activated */
  .darkMode { 
-    display: flex;
-    justify-content: center;
     background-color: black;
     color: white;
 }
@@ -35,7 +32,6 @@
 }
 /* The picture of the sun for the left side of the index and form on the right side*/
 .column {
-    float: left;
     width:100%;
     padding: 30px;
     height: 600px;
