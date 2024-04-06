@@ -2,9 +2,18 @@
  body { 
     box-sizing: border-box;
 }
+
+header {
+    display:flex;
+    flex-direction: row;
+}
+
 .dark { 
     display:flex;
     justify-content: flex-end;
+    padding:20px;
+    margin-bottom: 30px;
+    margin-right:35px;
     
     
 }
