@@ -1,6 +1,4 @@
 body {
-    display:flex;
-    justify-content: center;
     box-sizing: border-box;
 }
 
@@ -29,8 +27,6 @@ body {
 }
 
 .dark-mode {
-    display: flex;
-    justify-content: center;
     background-color: black;
     color: white;
 }
