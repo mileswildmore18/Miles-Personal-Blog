@@ -1,47 +1,44 @@
 body {
+    display:flex;
     box-sizing: border-box;
 }
 
 /* The properties for when dark mode is activated */
-.dark-mode {
+.darkMode {
     display: flex;
     justify-content: flex-end;
     background-color: black;
     color: white;
 }
-.light
+
 /* The picture of the sun for the left side of the index */
 .column {
-    float: left;
     width:50%;
-    padding: 10px;
-    height: 300px;
+    padding: 30px;
+    height: 600px;
 }
 
-.row:after {
-    display: table;
-    clear:both;
+.row {
+    display:flex;
 }
+
 
 .first-blog {
     display:flex;
-    flex-direction: column;
-    justify-content: center;
     align-items: center;
-    background-image: url(../sun-blog.png);
-    width: 50%;
+    width: 100%;
     
 
 }
-.first-blog h1 {
-    display:flex;
-    justify-content: center;
-    align-items: center;
-    color:white;
-    font-family: Arial, Helvetica, sans-serif;
+.h1 {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
 
 .form {
+    align-content: right;
     display: inline-block;
     width: 100%;
 }

@@ -55,5 +55,6 @@ function countdown() {
 //This will activate dark mode and light mode
 function darkMode() {
     let mode = document.body;
-    mode.classList.toggle("dark-mode");
+    mode.classList.toggle("darkMode");
+
 }
