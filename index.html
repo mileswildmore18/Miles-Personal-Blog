@@ -10,7 +10,7 @@
 
     <body>
         <div class="dark">
-            <button class="darkMode" onclick="darkMode()">&#127763;</button>
+            <button class="darkMode" onclick="darkMode()">Dark&#127763;Light</button>
         </div>
         <div class="row">
             <div class="column">
@@ -22,7 +22,7 @@
                 </article>
             </div>
             <div class="column">
-                <div id="warningMessage"></div>
+                
                 <form class="form" onsubmit="return validateform()" action="blog.html">
                     <h2>What's on your mind?</h2>
                     <div class="input-group">                        
@@ -34,7 +34,8 @@
                         <textarea text="text" id="Content" name="Content">
                         </textarea><br>
                         
-                        <input type="submit" value="submit" onclick="reDirect()">
+                        <button id="submit" value="submit" onclick="reDirect()">Submit</button>
+                <div id="warningMessage"></div>
                 </form>
             </div>
         </div>
