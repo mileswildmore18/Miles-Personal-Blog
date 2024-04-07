@@ -7,27 +7,42 @@ const warningMessage = document.getElementsByClassName('form');
 
 
 //This will activate a alert message if submission form is not filled out
-submitButton.addEventListener('click', function storeInput() {
-    if (userInput != null) {
-         localStorage.setItem('Username', userInput.value);
+submitButton.addEventListener('submit', function storeInput(submitted) {
+    submitted.preventDefault();
+
+    let name = [];
+    
+    if(userInput ==='' || userInput == null) {
+        name.push('Please enter name');
     } else {
-         alert('Please enter your username');
-    } if (userTitle != null) {
-         localStorage.setItem('Title', userTitle.value);
+        localStorage.setItem('username', userInput.value);
+    } 
+    let title = [];
+
+    if (userTitle==='' || userTitle == null) {
+        title.push('Please enter title');
     } else {
-         alert('Please enter a title for your post');
-    } if (userContent != null) {
-         localStorage.setItem('Content', userContent.value);
+        localStorage.setItem('title', userTitle.value);
+    }
+    let content = [];
+
+    if (userContent==='' || userContent == null) {
+        content.push('Please enter content');
     } else {
-         alert('Content cannot be blank');
+        localStorage.setItem('content', userContent.value);
     }
 });
-
+    
+    
+function showResponse(warningMessage) {
+    submitButton.preventDefault();
+    console.log(submitButton);
+    const response =
+    "Please have all content filled out ";
+    warningMessage.textContent = response;
+}
 
 //Show how long the alert message stays on failed submission
-
-
-
 
 function countdown() {
     let messageTime = 5;
@@ -47,10 +62,15 @@ function countdown() {
         }
     })
 
+
 }
+
 //This will activate dark mode and light mode
 function darkMode() {
     let mode = document.body;
     mode.classList.toggle("darkMode");
 
+}
+function reDirect() {
+    location.replace("blog.html")
 }
