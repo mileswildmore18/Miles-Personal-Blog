@@ -117,12 +117,8 @@ label {
     margin-top: 30px;
     border: none;
 }
-/* The message is hidden unless an error is made */
-#warningMessage {
-    visibility:hidden;
-    
-}
+
 /* This will display if there is an error in submitting blank information */
-#warningMessage.error {
+ #warningMessage { 
     color:red;
 }

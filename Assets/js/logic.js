@@ -3,24 +3,26 @@ const userInput = document.querySelector('#userName');
 const userTitle = document.querySelector('#title');
 const userContent = document.querySelector('#content');
 const submitButton = document.getElementById('submit');
-const warningMessage = document.getElementsByClassName('form');
+const warningMessage = document.getElementById('warningMessage');
 const allPost = [];
 
 //This will activate a alert message if submission form is not filled out
 submitButton.addEventListener('click', function (event) {
     event.preventDefault();
-    submitButton.value = '';
 
-    for (let i = 0; i < warningMessage.length; i++) {
-        warningMessage[i].textContent = '';
-    }
+    //for (let i = 0; i < warningMessage.length; i++) {
+        //warningMessage[i].textContent = '';
+   // }
+    console.log(userContent.value);
+    if ((userInput.value === null || userInput.value === '' ) || (userTitle.value === null || userTitle.value === '')) {
 
-    if (userInput === '' || userTitle === '' || userContent === '') {
+        warningMessage.textContent = 'Please fill out the form';
 
-        alert('Please enter name');
+    }else if(userContent.value === null || userContent.value.trim() === ''){
 
+        warningMessage.textContent = 'Please fill out the form';
     } else { 
-        //Build in the oject with value form the form, add the oject to array, to localstorage
+        //Build in the object with value form the form, add the oject to array, to localstorage
         const userPost = {
             name: userInput.value,
             title: userTitle.value,
@@ -28,27 +30,16 @@ submitButton.addEventListener('click', function (event) {
         }
         allPost.push(userPost);
         localStorage.setItem('user', JSON.stringify(userPost));
-    }
+        //Call the redirect
+        reDirect();
+    }//Take the user to the blog page
 });
+
 //Store information of the form information to the console
 console.log(localStorage);
-//Take the user to the blog page
-function reDirect() {
-    location.replace("blog.html")
-}
-//Save the information put in the form
 
-
-function showResponse(warningMessage) {
-    submitButton.preventDefault();
-    console.log(submitButton);
-    const response =
-        "Please have all content filled out ";
-    warningMessage.textContent = response;
-}
 
 //Show how long the alert message stays on failed submission
-
 function timer() {
     let messageTime = 5;
 
@@ -69,6 +60,20 @@ function timer() {
             displayMessage();
         };
     }, 1000)
+
+
+//Save the information put in the form
+
+
+function showResponse(warningMessage) {
+    submitButton.preventDefault();
+    console.log(submitButton);
+    const response =
+        "Please have all content filled out ";
+    warningMessage.textContent = response;
+}
+
+
 
 
 }
