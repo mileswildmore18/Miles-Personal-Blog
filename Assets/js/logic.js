@@ -1,54 +1,49 @@
 
-const userInput = document.querySelector('#username');
+const userInput = document.querySelector('#userName');
 const userTitle = document.querySelector('#title');
 const userContent = document.querySelector('#content');
 const submitButton = document.getElementById('submit');
 const warningMessage = document.getElementsByClassName('form');
-
+const allPost = [];
 
 //This will activate a alert message if submission form is not filled out
-submitButton.addEventListener('submit', function storeInput() {
-    submitted.preventDefault();
+submitButton.addEventListener('click', function (event) {
+    event.preventDefault();
+    submitButton.value = '';
 
-    let name = [];
-    
-    if(userInput ==='') {
-        name.alert('Please enter name');
-    } else {
-        localStorage.setItem('username', userInput.value);
-    } 
-    let title = [];
-
-    if (userTitle==='') {
-        title.alert('Please enter title');
-    } else {
-        localStorage.setItem('title', userTitle.value);
+    for (let i = 0; i < warningMessage.length; i++) {
+        warningMessage[i].textContent = '';
     }
-    let content = [];
 
-    if (userContent==='') {
-        content.alert('Please enter content');
-    } else {
-        localStorage.setItem('content', userContent.value);
-    }
-});
-    console.log(localStorage);
+    if (userInput === '' || userTitle === '' || userContent === '') {
 
-//Save the information put in the form
-    submitButton.addEventListener('click', function storeInfo(){
+        alert('Please enter name');
+
+    } else { 
+        //Build in the oject with value form the form, add the oject to array, to localstorage
         const userPost = {
             name: userInput.value,
             title: userTitle.value,
-            content: userContent.value,
-
+            content: userContent.value
         }
-    })
+        allPost.push(userPost);
+        localStorage.setItem('user', JSON.stringify(userPost));
+    }
+});
+//Store information of the form information to the console
+console.log(localStorage);
+//Take the user to the blog page
+function reDirect() {
+    location.replace("blog.html")
+}
+//Save the information put in the form
+
 
 function showResponse(warningMessage) {
     submitButton.preventDefault();
     console.log(submitButton);
     const response =
-    "Please have all content filled out ";
+        "Please have all content filled out ";
     warningMessage.textContent = response;
 }
 
@@ -61,8 +56,8 @@ function timer() {
 
         //updating the page
         if (messageTime >= 1) {
-        warningMessage.textContent = `Please fill out the form before submitting`;
-        messageTime--;
+            warningMessage.textContent = `Please fill out the form before submitting`;
+            messageTime--;
         }
         //updating the time of the message
 
@@ -90,5 +85,5 @@ function reDirect() {
 }
 //Reset the form
 submitButton.addEventListener('click', function () {
-document.querySelector('form').reset()
+    document.querySelector('form').reset()
 })

@@ -43,6 +43,10 @@ h2 {
     height: 600px;
 }
 
+.title {
+    border-bottom:thick;
+}
+
 .footer {
     font-family:Arial, Helvetica, sans-serif;
     font-weight: bold;
