@@ -4,15 +4,12 @@ const userTitle = document.querySelector('#title');
 const userContent = document.querySelector('#content');
 const submitButton = document.getElementById('submit');
 const warningMessage = document.getElementById('warningMessage');
-const allPost = [];
+const allPost = JSON.parse(stringPost) || [];
 
 //This will activate a alert message if submission form is not filled out
 submitButton.addEventListener('click', function (event) {
     event.preventDefault();
 
-    //for (let i = 0; i < warningMessage.length; i++) {
-        //warningMessage[i].textContent = '';
-   // }
     console.log(userContent.value);
     if ((userInput.value === null || userInput.value === '' ) || (userTitle.value === null || userTitle.value === '')) {
 
@@ -29,7 +26,7 @@ submitButton.addEventListener('click', function (event) {
             content: userContent.value
         }
         allPost.push(userPost);
-        localStorage.setItem('user', JSON.stringify(userPost));
+        localStorage.setItem('allPost', JSON.stringify(allPost));
         //Call the redirect
         reDirect();
     }//Take the user to the blog page
@@ -47,7 +44,7 @@ function timer() {
 
         //updating the page
         if (messageTime >= 1) {
-            warningMessage.textContent = `Please fill out the form before submitting`;
+            warningMessage.textContent = 'Please fill out the form';
             messageTime--;
         }
         //updating the time of the message
@@ -60,21 +57,6 @@ function timer() {
             displayMessage();
         };
     }, 1000)
-
-
-//Save the information put in the form
-
-
-function showResponse(warningMessage) {
-    submitButton.preventDefault();
-    console.log(submitButton);
-    const response =
-        "Please have all content filled out ";
-    warningMessage.textContent = response;
-}
-
-
-
 
 }
 
