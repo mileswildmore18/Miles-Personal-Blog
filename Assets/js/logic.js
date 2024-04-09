@@ -62,6 +62,5 @@ function reDirect() {
 }
 //Reset the form
 submitButton.addEventListener('click', function () {
-    timer();
     document.querySelector('form').reset()
 })
