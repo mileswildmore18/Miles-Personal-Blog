@@ -17,3 +17,5 @@ After you have visited the blog page after you put in all of your content in, on
 Have fun with adding blogs to the web with any of the ideas you want to share to me and everyone out their on the internet!
 
 # Link
+
+https://mileswildmore18.github.io/Miles-Personal-Blog/
