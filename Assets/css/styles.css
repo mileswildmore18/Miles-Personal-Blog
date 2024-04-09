@@ -1,13 +1,13 @@
-
+/* Setup for the entire center of the website */
  body { 
     box-sizing: border-box;
 }
-
+/* The title properties on the top of the page */
 header {
     display:flex;
     flex-direction: row;
 }
-
+/* The dark/light mode button properties */
 .dark { 
     display:flex;
     justify-content: flex-end;
@@ -18,12 +18,12 @@ header {
     
 }
 
-/* The properties for when dark mode is activated */
+/* The properties for words in the light/dark mode toggle */
  .darkMode { 
     background-color: rgb(51, 51, 51);
     color: white;
 }
-
+/* Properties for the words on top of each text box */
 .darkMode label {
     color:white;
 }
@@ -50,20 +50,13 @@ header {
     font-family: Arial, Helvetica, sans-serif;
 }
 
-.centered {
-    position:absolute;
-    top:50%;
-    left:50%;
-    transform: translate(-50%,-50%);
-}
-
 /* Adjusts the sun icon */
 .first-blog {
     display:flex;
     align-items: center;
-    
 
 }
+/* Properties for My first blog words */
 .h1 {
   position: absolute;
   top: 50%;
@@ -71,6 +64,7 @@ header {
   transform: translate(-50%, -50%);
 }
 
+/* The properties for the boxes for the main content */
 .form {
     display: inline-block;
     width: 100%;
@@ -85,21 +79,23 @@ h2 {
     font-family: Arial, Helvetica, sans-serif;
     margin: 115px;
 }
-
+/*Properties for the words on top of each box  */
 .input-group {
     font-weight: bold;
 }
 
+/* Controls the size of the boxes and lines up via blocks */
 input[type=text] {
     display: inline-block;
     width: 80%;
     padding: 40px, 40px;
 }
 
+/* Controls the font properties of the words on top of each box */
 label {
-    color: black;
     font-family: Arial, Helvetica, sans-serif;
 }
+
 /* Adds properties to the content textbox */
 #Content {
     height: 100px;
@@ -121,21 +117,4 @@ label {
 /* This will display if there is an error in submitting blank information */
  #warningMessage { 
     color:red;
-}
-
-.footer {
-    font-family:Arial, Helvetica, sans-serif;
-    font-weight: bold;
-}
-
-.footer h4, h5{
-    text-align:center;
-}
-
-a:link{
-    color:rgb(238, 139, 27);
-}
-
-a:visited{
-    color:rgb(236, 175, 62);
 }

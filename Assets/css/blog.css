@@ -1,3 +1,4 @@
+/* Sets up the properties for the body of the website */
 body {
     box-sizing: border-box;
 }
@@ -14,7 +15,7 @@ h2 {
     font-size: 32px;
     margin-bottom: 10px;
 }
-
+/* Properties for the navigation tabs on the top right side */
 .nav {
     display: flex;
     justify-content: flex-end;
@@ -22,7 +23,7 @@ h2 {
     margin-bottom: 20px;
     margin-right: 20px;
 }
-
+/* The back button properties */
 .back {
     display: flex;
     background-color:black;
@@ -46,34 +47,36 @@ h2 {
 .article h2 {
     border-bottom: outset; 
     font-size: 12px;
+    font-family:Arial, Helvetica, sans-serif;
 }
 /* Blog title */
 .article h1 {
     border-bottom: solid;
     font-size: 32px;
+    font-family: Arial, Helvetica, sans-serif;
 }
 
 /* Content on blog */
 .article p {
     border-bottom: dotted;
-}
-.title {
-    border-bottom:thick;
+    font-family:Arial, Helvetica, sans-serif;
 }
 
+
+/* The properties for the footer section at the bottom of page */
 .footer {
     font-family:Arial, Helvetica, sans-serif;
     font-weight: bold;
 }
-
+/* The copyright footer */
 .footer h4, h5{
     text-align:center;
 }
-
+/* When links have not been visited yet */
 a:link{
     color:rgb(238, 139, 27);
 }
-
+/* When links have been visited */
 a:visited{
     color:rgb(236, 175, 62);
 }

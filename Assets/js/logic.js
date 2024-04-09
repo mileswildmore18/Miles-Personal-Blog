@@ -13,20 +13,20 @@ submitButton.addEventListener('click', function (event) {
     console.log(userContent.value);
     if ((userInput.value === null || userInput.value === '' ) || (userTitle.value === null || userTitle.value === '')) {
 
-        //warningMessage.textContent = 'Please fill out the form';
         //updating the page
         warningMessage.textContent = 'Please fill out the form';
         message = setTimeout(function () {    
         warningMessage.textContent = '';   
     }, 5000)
-    //clears the error message
+    //clears the error message after 5 second
 
     }else if(userContent.value === null || userContent.value.trim() === ''){
 
-        //warningMessage.textContent = 'Please fill out the form';
+        
         warningMessage.textContent = 'Please fill out the form';
         message = setTimeout(function () {    
-        warningMessage.textContent = '';   
+        warningMessage.textContent = '';
+        //Show how long the alert message stays on failed submission   
     }, 5000)
     } else { 
         //Build in the object with value form the form, add the oject to array, to localstorage
@@ -36,6 +36,7 @@ submitButton.addEventListener('click', function (event) {
             title: userTitle.value,
             content: userContent.value
         }
+        // Stores the information to localstorage
         allPost.push(userPost);
         localStorage.setItem('allPost', JSON.stringify(allPost));
         //Call the redirect
@@ -47,32 +48,7 @@ submitButton.addEventListener('click', function (event) {
 console.log(localStorage);
 
 
-//Show how long the alert message stays on failed submission
-function timer() {
-    let messageTime = 5;
-    
-    warningMessage.textContent = 'Please fill out the form';
-    message = setTimeout(function () {    
-    warningMessage.textContent = '';   
-    }, 5000)
 
-        //updating the page
-        //if (messageTime >= 1) {
-            //warningMessage.textContent = 'Please fill out the form';
-            //messageTime--;
-        //}
-        //updating the time of the message
-
-        // if (messageTime <= 0) {
-        //     //Stop the timer
-        //     clearInterval(message);
-        //     //empty the box
-        //     warningMessage.textContent = '';
-        //     displayMessage();
-        // };
-    
-
-}
 
 //This will activate dark mode and light mode
 function darkMode() {

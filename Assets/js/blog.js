@@ -10,6 +10,7 @@ const displayNewPost = function () {
         let content = document.createElement('p');
         let author = document.createElement('h2');
         
+
         author.textContent = newContent[i].name;
         title.textContent = newContent[i].title;
         content.textContent = newContent[i].content;
@@ -25,12 +26,15 @@ const displayNewPost = function () {
         div.append(author);
 
         articleContainer.append(div);
+        // Displays the article that the user added from the form
     };
+    // Stores information from the JSON parse 
     console.log(newContent);
     console.log(articleContainer);
 }
 displayNewPost()
 
+// Controls the light/dark mode
 function darkMode() {
     let mode = document.body;
     mode.classList.toggle("darkMode");
