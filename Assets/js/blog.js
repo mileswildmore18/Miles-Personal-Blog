@@ -9,17 +9,17 @@ const displayNewPost = function () {
         let title = document.createElement('h1');
         let content = document.createElement('p');
         let author = document.createElement('h2');
-        
+
 
         author.textContent = newContent[i].name;
         title.textContent = newContent[i].title;
         content.textContent = newContent[i].content;
-        
+
         // Sets up the properties of the classes
         author.setAttribute('class', 'username');
         title.setAttribute('class', 'title');
         content.setAttribute('class', 'content');
-        
+
         // Prints out the content of the order appended on the blog page
         div.append(title);
         div.append(content);
