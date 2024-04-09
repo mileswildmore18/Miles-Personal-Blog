@@ -100,7 +100,7 @@ label {
     color: black;
     font-family: Arial, Helvetica, sans-serif;
 }
-
+/* Adds properties to the content textbox */
 #Content {
     height: 100px;
     width: 80%;
@@ -121,4 +121,21 @@ label {
 /* This will display if there is an error in submitting blank information */
  #warningMessage { 
     color:red;
+}
+
+.footer {
+    font-family:Arial, Helvetica, sans-serif;
+    font-weight: bold;
+}
+
+.footer h4, h5{
+    text-align:center;
+}
+
+a:link{
+    color:rgb(238, 139, 27);
+}
+
+a:visited{
+    color:rgb(236, 175, 62);
 }

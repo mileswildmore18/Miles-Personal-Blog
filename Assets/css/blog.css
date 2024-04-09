@@ -35,14 +35,28 @@ h2 {
     background-color: rgb(49, 48, 48);
     color: white;
 }
-
+/* Properties for the article section */
 .article {
     display: flex;
     flex-direction:column;
     border-style: double;
     height: 600px;
 }
+/* Username */
+.article h2 {
+    border-bottom: outset; 
+    font-size: 12px;
+}
+/* Blog title */
+.article h1 {
+    border-bottom: solid;
+    font-size: 32px;
+}
 
+/* Content on blog */
+.article p {
+    border-bottom: dotted;
+}
 .title {
     border-bottom:thick;
 }

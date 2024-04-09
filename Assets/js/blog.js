@@ -1,33 +1,33 @@
-//Add a Back Button to lead back to the index page
-//Add a Light/Dark mode
-
-//Add information from the form filled out from index
+//Adds information from the form filled out from index
 const displayNewPost = function () {
-    const stringContent = localStorage.getItem('userPost');
-    const newContent = JSON.parse(stringContent);
-
+    const stringContent = localStorage.getItem('allPost');
+    const newContent = JSON.parse(stringContent) || [];
+    const articleContainer = document.querySelector('.article')
     for (i = 0; i < newContent.length; i++) {
+        //Adding the elements by their ID
         let div = document.createElement('div');
         let title = document.createElement('h1');
         let content = document.createElement('p');
         let author = document.createElement('h2');
-
+        
+        author.textContent = newContent[i].name;
         title.textContent = newContent[i].title;
         content.textContent = newContent[i].content;
-        author.textContent = newContent[i].name;
-
+        
+        // Sets up the properties of the classes
+        author.setAttribute('class', 'username');
         title.setAttribute('class', 'title');
         content.setAttribute('class', 'content');
-        author.setAttribute('class', 'username');
-
+        
+        // Prints out the content of the order appended on the blog page
         div.append(title);
         div.append(content);
         div.append(author);
 
-        document.article.append(div);
+        articleContainer.append(div);
     };
-    console.log( allPosts)
-    console.log(postContent);
+    console.log(newContent);
+    console.log(articleContainer);
 }
 displayNewPost()
 

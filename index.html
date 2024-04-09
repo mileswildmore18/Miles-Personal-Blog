@@ -1,45 +1,45 @@
 <!DOCTYPE html>
 <html lang="en">
 
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" href="./Assets/css/styles.css">
-        <title>Miles'Personal Blog</title>
-    </head>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./Assets/css/styles.css">
+    <title>Miles'Personal Blog</title>
+</head>
 
-    <body>
-        <div class="dark">
-            <button class="darkMode" onclick="darkMode()">Dark&#127763;Light</button>
+<body>
+    <div class="dark">
+        <button class="darkMode" onclick="darkMode()">Dark&#127763;Light</button>
+    </div>
+    <div class="row">
+        <div class="column">
+            <article class="first-blog">
+                <div class="container">
+                    <img src="Assets/sun.png" alt="Sun" style="width:100%;">
+                    <div class="h1">My First Blog</div>
+                </div>
+            </article>
         </div>
-        <div class="row">
-            <div class="column">
-                <article class="first-blog">
-                    <div class="container">
-                        <img src="Assets/sun.png" alt="Sun" style="width:100%;">
-                        <div class="h1">My First Blog</div>
-                    </div>
-                </article>
-            </div>
-            <div class="column">
-                
-                <form class="form" action="./blog.html">
-                    <h2>What's on your mind?</h2>
-                    <div class="input-group">                        
-                        <label for="userName">Username</label><br>
-                        <input type="text" id="userName" name="userName" /><br>
-                        <label for="title"> Title</label><br>
-                        <input type="text" id="title" name="title" /><br>
-                        <label for="content"> Content</label><br>
-                        <textarea text="text" id="content" name="content">
+        <div class="column">
+
+            <form class="form" action="./blog.html">
+                <h2>What's on your mind?</h2>
+                <div class="input-group">
+                    <label for="userName">Username</label><br>
+                    <input type="text" id="userName" name="userName" /><br>
+                    <label for="title"> Title</label><br>
+                    <input type="text" id="title" name="title" /><br>
+                    <label for="content"> Content</label><br>
+                    <textarea text="text" id="content" name="content">
                         </textarea><br>
-                        
-                        <button id="submit" value="submit">Submit</button>
-                <div id="warningMessage"></div>
-                </form>
-            </div>
+
+                    <button id="submit" value="submit">Submit</button>
+                    <div id="warningMessage"></div>
+            </form>
         </div>
-        <script src="./Assets/js/logic.js"></script>
-    </body>
+    </div>
+    <script src="./Assets/js/logic.js"></script>
+</body>
 
 </html>
